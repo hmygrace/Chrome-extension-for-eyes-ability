@@ -1,0 +1,10 @@
+body{
+    height: 200px;
+    width: 350px;
+}
+.popup-title{
+    padding: 10px;
+    padding-top: 5%;
+    padding-left: 5%;
+    margin: auto;
+}
