@@ -64,3 +64,13 @@ changeFontWeight.onclick = function() {
     //         {file: "scripts/fontWeight-change.js"});
     // });
 };
+
+let stop = document.getElementById('stop');
+
+stop.onclick = function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.executeScript(
+            tabs[0].id,
+            {file: "scripts/stop.js"});
+    });
+}

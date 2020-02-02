@@ -18,7 +18,7 @@ function changeColor(element,color){
     }
 }
 
-document.body.addEventListener('mouseover', function (event) {
+document.body.addEventListener('mouseover', function mouseover(event) {
     console.log("mouseover");
     // get reference to the element user mouseover
     if(event.target.id!="popup"){
@@ -26,7 +26,7 @@ document.body.addEventListener('mouseover', function (event) {
         event.target.style.borderWidth = "5px";
     }
     }, false);
-document.body.addEventListener('mouseout', function (event) {
+document.body.addEventListener('mouseout', function mouseout(event) {
     console.log("mouseout");
     // get reference to the element user mouseover
     if(event.target.id!="popup"){
@@ -34,7 +34,7 @@ document.body.addEventListener('mouseout', function (event) {
         event.target.style.borderWidth = "";
     }
 }, false);
-document.body.addEventListener('click',function(event){
+document.body.addEventListener('click',function click(event){
     chrome.storage.sync.get('backgroundColor', function(data) {
         event.target.style.backgroundColor = data.backgroundColor;
     });
